@@ -74,7 +74,6 @@ const business = async () => {
     const businessInfo = businessBooks.map((e) => { return e.volumeInfo})
     const businessSection = document.getElementById("business");
     const htmlOutput = businessInfo.map((e) => {
-        console.log(e)
         return renderBusiness(e);
     })
     businessSection.innerHTML = htmlOutput.join("")

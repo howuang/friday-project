@@ -9,11 +9,15 @@ This Friday project is Front End Development exercise utilize Met Museum API to 
         |- index.html
         |- style.css
         |- script.js/
-            |-images.png
-        |- detail-page/
+        |- detail/
             |- index.html
             |- style.css
             |- script.js
+        |- about/
+            |- index.html
+            |- style.css
+        |- images/
+            back.png
 ```
 
 ## UI Mockup

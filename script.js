@@ -59,15 +59,15 @@ const comedy = async() => {
         return `
         <div class="row flex-row flex-nowrap">
             <div class="col">
-                    <div class="card myCard">
-                        <img src="${singleComedy.imageLinks.thumbnail}" class="card-img-top" atl="Book cover">
-                        <div class="card-body">
-                        <h5 class="card-title">${singleComedy.title}</h5>
-                        <p class="card-text">${singleComedy.authors}</p>
-                        <a href="detail/index.html">Read more</a>
-                        </div>
+                <div class="card myCard">
+                    <img src="${singleComedy.imageLinks.thumbnail}" class="card-img-top" atl="Book cover">
+                    <div class="card-body">
+                    <h5 class="card-title">${singleComedy.title}</h5>
+                    <p class="card-text">${singleComedy.authors}</p>
+                    <a href="detail/index.html">Read more</a>
                     </div>
                 </div>
+            </div>
         </div>
         `
     };
@@ -114,7 +114,6 @@ const business = async() => {
     const businessInfo = businessBooks.map((e) => { return e.volumeInfo})
     const businessSection = document.getElementById("business");
     const htmlOutput = businessInfo.map((e) => {
-        console.log(e)
         return renderBusiness(e);
     })
     businessSection.innerHTML = htmlOutput.join("")

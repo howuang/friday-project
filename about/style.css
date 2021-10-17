@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -32,6 +32,8 @@ nav ul li {
   margin: 10px 30px;
 }
 nav ul li a {
+  font-size: 20px;
+  font-weight: 500;
   color: white;
   text-decoration: none;
   position: relative;
@@ -78,6 +80,13 @@ section {
   margin-bottom: 20px;
 }
 
+.about h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
 .about p {
   color: rgb(185, 102, 46);
 }
@@ -93,12 +102,14 @@ section {
   color: white;
   width: 600px;
   border: 2px solid white;
+  border-radius: 30px;
   margin: 30px;
 }
 
 .contact-text {
   color: rgb(185, 102, 46);
   text-align: center;
+  font-weight: 600;
 }
 
 .contact-form {
@@ -116,6 +127,10 @@ section {
   color: rgb(49, 64, 114);
 }
 
+.contact-form input:focus {
+  border: 1px solid rgb(49, 64, 114);
+}
+
 .contact-form textarea {
   color: rgb(49, 64, 114);
 }
@@ -129,7 +144,9 @@ section {
   background-color: white;
   border: none;
   margin-top: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
 }
 
 .contact-form button:hover {
@@ -138,7 +155,6 @@ section {
 }
 
 .footer-wrapper {
-  border-top: 1px solid white;
   padding-top: 50px;
   color: white;
   width: 100%;
@@ -155,10 +171,21 @@ section {
 
 .column a {
   text-decoration: none;
-  color: rgb(185, 102, 46);
+  color: white;
   padding: 5px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .column a:hover {
+  color: rgb(49, 64, 114);
+}
+
+.column .icon {
+  font-size: 28px;
+  color: white;
+}
+
+.column .icon:hover {
   color: rgb(49, 64, 114);
 }

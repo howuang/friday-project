@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -32,6 +32,8 @@ nav ul li {
   margin: 10px 30px;
 }
 nav ul li a {
+  font-size: 20px;
+  font-weight: 500;
   color: white;
   text-decoration: none;
   position: relative;
@@ -74,6 +76,7 @@ section {
 .top-pick-container h3 {
   margin: 30px;
   text-align: center;
+  font-weight: 600;
   color: rgb(185, 102, 46);
 }
 
@@ -83,12 +86,30 @@ section {
   overflow-x: scroll;
 }
 
+.top-pick::-webkit-scrollbar {
+  height: 12px;
+  width: 10px;
+}
+
+.top-pick::-webkit-scrollbar-track {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.top-pick::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.top-pick::-webkit-scrollbar-thumb:hover {
+  background: rgb(49, 64, 114);
+}
+
 .myCard {
   width: 250px;
   height: 500px;
   overflow: hidden;
   padding: 10px;
-  border-radius: 20px;
   margin: 10px;
 }
 
@@ -127,12 +148,14 @@ section {
   color: white;
   width: 600px;
   border: 2px solid white;
+  border-radius: 30px;
   margin: 30px;
 }
 
 .contact-text {
   color: rgb(185, 102, 46);
   text-align: center;
+  font-weight: 600;
 }
 
 .contact-form {
@@ -142,7 +165,6 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: "Roboto Mono";
   border-top: 2px solid rgb(185, 102, 46);
 }
 
@@ -163,7 +185,9 @@ section {
   background-color: white;
   border: none;
   margin-top: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
 }
 
 .contact-form button:hover {
@@ -172,7 +196,6 @@ section {
 }
 
 .footer-wrapper {
-  border-top: 1px solid white;
   padding-top: 50px;
   color: white;
   width: 100%;
@@ -189,10 +212,21 @@ section {
 
 .column a {
   text-decoration: none;
-  color: rgb(185, 102, 46);
+  color: white;
   padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .column a:hover {
+  color: rgb(49, 64, 114);
+}
+
+.column .icon {
+  font-size: 28px;
+  color: white;
+}
+
+.column .icon:hover {
   color: rgb(49, 64, 114);
 }
