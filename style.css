@@ -154,7 +154,7 @@ section {
 }
 
 #result-group {
-  max-width: 1000px;
+  max-width: 1500px;
   padding: 30px;
   display: flex;
   align-items: center;
@@ -180,7 +180,9 @@ section {
   max-width: 1400px;
   display: flex;
   overflow-x: scroll;
+  margin: 20px;
 }
+
 .top-pick::-webkit-scrollbar {
   height: 12px;
   width: 10px;
@@ -191,13 +193,11 @@ section {
   border-radius: 10px;
 }
 
-/* Handle */
 .top-pick::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 .top-pick::-webkit-scrollbar-thumb:hover {
   background: rgb(49, 64, 114);
 }

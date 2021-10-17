@@ -43,6 +43,41 @@ const handleSearch = (e) => {
 
 searchBtn.addEventListener("click", handleSearch);
 
+searchBox.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13 && searchBox.value !== "") {
+       const searchContent = searchBox.value;
+    const fetchAsync = async () => {
+        const url = baseURL + path + params + searchContent + authorParam + API_KEY;
+        let response = await fetch(url);
+        let data = await response.json();
+        const books = data.items;
+        const booksInfo = books.map((e) => { return e.volumeInfo})
+        const resultHTML = document.getElementById("result-group")
+        const htmlOutput = booksInfo.map((singleBook) => {
+            return renderBooks(singleBook)
+        })
+        resultHTML.innerHTML = htmlOutput.join("");
+        return;
+    }
+
+    function renderBooks(singleBook) {
+        return `
+        <div class="col">
+            <div class="card myCard">
+                <img src="${singleBook.imageLinks.thumbnail}" class="card-img-top" atl="Book cover">
+                <div class="card-body">
+                <h5 class="card-title">${singleBook.title}</h5>
+                <p class="card-text">${singleBook.authors}</p>
+                <a href="detail/index.html">Read more</a>
+                </div>
+            </div>
+        </div>
+        `
+    }
+    fetchAsync();
+};
+})
+
 const comedy = async() => {
     const url = baseURL + path + params + "comedy" + authorParam + API_KEY;
     let response = await fetch(url);
