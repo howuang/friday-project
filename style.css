@@ -108,6 +108,7 @@ section {
 .main-content h3 {
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .main-content input {
